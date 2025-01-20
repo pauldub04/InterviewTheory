@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Сети - InterviewTheory</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../cpp/SUMMARY.html"><strong aria-hidden="true">1.</strong> C++</a></li><li class="chapter-item expanded "><a href="../distributed_systems/theory.html"><strong aria-hidden="true">2.</strong> Распределённые системы</a></li><li class="chapter-item expanded "><a href="../DB/theory_BDS.html"><strong aria-hidden="true">3.</strong> Базы данных</a></li><li class="chapter-item expanded "><a href="../network/theory.html" class="active"><strong aria-hidden="true">4.</strong> Сети</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">InterviewTheory</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/pauldub04/InterviewTheory" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#Модель-osi" id="Модель-osi">Модель OSI</a></h1>
+<p><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%82%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_OSI">Сетевая модель OSI</a> (The Open Systems Interconnection model) — сетевая модель стека (магазина) сетевых протоколов OSI/ISO. Посредством данной модели различные сетевые устройства могут взаимодействовать друг с другом. Модель определяет различные уровни взаимодействия систем. Каждый уровень выполняет определённые функции при таком взаимодействии.</p>
+<p><img src="images/1.png" alt="alt text" />
+<img src="images/2.png" alt="alt text" />
+<img src="images/3.png" alt="alt text" /></p>
+<h1><a class="header" href="#tcpip" id="tcpip">TCP/IP</a></h1>
+<p><a href="https://ru.wikipedia.org/wiki/TCP/IP">TCP/IP</a> — сетевая модель передачи данных, представленных в цифровом виде. Модель описывает способ передачи данных от источника информации к получателю. В модели предполагается прохождение информации через четыре уровня, каждый из которых описывается правилом (протоколом передачи). Наборы правил, решающих задачу по передаче данных, составляют стек протоколов передачи данных, на которых базируется Интернет.</p>
+<p>IP - адрес компьютера в сети
+Port - номер приложения, работающего на компьютере
+Преобразованием доменного имени в цифровой IP-адрес занимается DNS</p>
+<h2><a class="header" href="#tcp" id="tcp">TCP</a></h2>
+<p><a href="https://ru.wikipedia.org/wiki/TCP">TCP</a> (англ. Transmission Control Protocol — протокол управления передачей) — один из основных протоколов передачи данных интернета. Пакеты в TCP называются сегментами.
+В стеке протоколов TCP/IP выполняет функции транспортного уровня модели OSI.
+Механизм TCP предоставляет поток данных с предварительной установкой соединения, осуществляет повторный запрос данных в случае потери данных и устраняет дублирование при получении двух копий одного пакета, гарантируя тем самым (в отличие от UDP) целостность передаваемых данных и уведомление отправителя о результатах передачи.
+Реализации TCP обычно встроены в ядра ОС. Существуют реализации TCP, работающие в пространстве пользователя.</p>
+<h2><a class="header" href="#udp" id="udp">UDP</a></h2>
+<p><a href="https://ru.wikipedia.org/wiki/UDP">UDP</a> (англ. User Datagram Protocol — протокол пользовательских датаграмм) — один из немногих ключевых элементов набора сетевых протоколов для Интернета. С UDP компьютерные приложения могут посылать сообщения (в данном случае называемые датаграммами) другим хостам по IP-сети без необходимости предварительного сообщения для установки специальных каналов передачи или путей данных. Протокол был разработан Дэвидом П. Ридом в 1980 году и официально определён в RFC 768.</p>
+<h2><a class="header" href="#Основные-термины" id="Основные-термины">Основные термины</a></h2>
+<p><img src="images/4.png" alt="alt text" /></p>
+<h1><a class="header" href="#dns" id="dns">DNS</a></h1>
+<p><a href="https://ru.wikipedia.org/wiki/DNS">DNS</a> (англ. Domain Name System «система доменных имён») — компьютерная распределённая система для получения информации о доменах. Чаще всего используется для получения IP-адреса по имени хоста (компьютера или устройства), получения информации о маршрутизации почты и/или обслуживающих узлах для протоколов в домене (SRV-запись).</p>
+<p><img src="images/5.png" alt="alt text" /></p>
+<h2><a class="header" href="#Что-происходит-когда-мы-пишем-адрес-сайта" id="Что-происходит-когда-мы-пишем-адрес-сайта">Что происходит, когда мы пишем адрес сайта?</a></h2>
+<p><img src="images/6.png" alt="alt text" /></p>
+<p>DNS упрощает нашу жизнь
+Набрав wiki.merionet.ru, то сначала наш девайс проверит кэш браузера или ОС, ведь если до этого мы посещали сайт, то запись о нем останется локально в кэше. А если сайт оказался новым, то мы шлем запрос Resolver DNS Server. Обычно этот сервер расположен у интернет провайдера (но можно поменять его на другой, например 8.8.8.8 - Google Public DNS, или 1.1.1.1 - CloudFlare Public DNS). Он также делает сопоставление пришедшего имени сайта и его адреса в своем кэше, если находит, то отвечает, а иначе мы начинаем наш поход в поисках адреса, и Resolver шлет запрос к корневому <strong>root</strong> серверу. Root сервер - это сервер, который находится на самом верхну DNS иерархии
+<img src="images/7.png" alt="alt text" />
+Root сервер не один, их много. Но и этот сервер нам не скажет IP адреса, он лишь скажет, к какому серверу обратиться дальше (для разветвления поиска, чтобы мы ушли в новую ветку).
+Далее нам следует обратиться к нужному серверу верхнего уровня TLD (Top Level Domain). TLD - это то, что идет после последней точки: <strong>.com</strong>, <strong>.org</strong>, <strong>.ru</strong>, <strong>.net</strong>
+Также существуют gTLD (Generic Top Level Domain) - они не привязаны к стране: <strong>.com</strong>, <strong>.edu</strong>, <strong>.ai</strong>
+Также есть ccTLD (Country Code Top Level Domain) - они привязаны к стране: <strong>.ru</strong>, <strong>.us</strong>, <strong>.uk</strong>
+То есть к root приходит запрос: &quot;Что скажешь про wiki.merionet.ru?&quot;. На что ему отвечают: &quot;Спроси у ccTLD сервера, т.к. домен верхнего сервера - это .ru&quot;. Далее resolver идет с ccTLD, где его отправляют на уровень ниже: к <strong>серверу авторитативных имен</strong>. Он либо скажет нам нужный IP-адрес, либо скажет, что сайта нет. После этого resolver скажет нашему девайсу, что у сайта такой-то IP-адрес, а еще он запишет адрес в кэш, чтобы снова не проходить по той же цепочке</p>
+<p>В терминологии DNS существует три типа запросов:</p>
+<ol>
+<li>Recursive - это запрос формата &quot;Пришли IP-адрес сайта&quot;</li>
+<li>Iterative - это запрос формата &quot;Пришли IP-адрес сайта либо авторитативный DNS сервер&quot;</li>
+<li>Inverse - это запрос формата &quot;Какое доменное имя у данного IP-адреса?&quot;</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../DB/theory_BDS.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../DB/theory_BDS.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
