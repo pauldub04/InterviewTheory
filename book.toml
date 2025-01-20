@@ -1,0 +1,10 @@
+[book]
+authors = ["Dmitry Volkov", "Pavel Dunyakov"]
+language = "en"
+multilingual = false
+src = "."
+title = "InterviewTheory"
+
+[output.html]
+default-theme = "ayu"
+git-repository-url = "https://github.com/pauldub04/InterviewTheory"
